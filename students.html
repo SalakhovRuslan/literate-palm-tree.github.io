@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Roboto:wght@400;700&display=swap"
+        rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Студенты</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="all">
+        <header class="header">
+            <a href="index.html"><img src="img/logo.svg" alt="logo" class="logo"></a>
+            <ul class="menu">
+                <li class="menu_list"><a href="index.html" class="menu_link">Главная</a></li>
+                <li class="menu_list"><a href="students.html" class="menu_link menu_link_activ">Студенты</a></li>
+                <li class="menu_list"><a href="about.html" class="menu_link">О курсе</a></li>
+                <li class="menu_list"><a href="contacts.html" class="menu_link">Контакты</a></li>
+            </ul>
+            <a href="#" class="button">Войти</a>
+        </header>
+        <main class="popap_position">
+            <div class="students">
+                <h3 class="title title_students">Студенты потока 08.02.2020 👧👦</h3>
+                <div class="students_content">
+                    <div class="student">
+                        <img src="img/Rectangle.jpg" alt="Василий Иванов">
+                        <p class="student_name">Василий Иванов</p>
+                    </div>
+                    <div class="student">
+                        <img src="img/Rectangle.jpg" alt="Мария Александрова">
+                        <p class="student_name">Мария Александрова</p>
+                        <p class="student_new">НОВИЧОК</p>
+                    </div>
+                    <div class="student">
+                        <img src="img/Rectangle.jpg" alt="Мария Александрова">
+                        <p class="student_name">Мария Александрова</p>
+                    </div>
+                    <div class="student">
+                        <img src="img/Rectangle.jpg" alt="Василий Иванов">
+                        <p class="student_name">Василий Иванов</p>
+                    </div>
+                    <div class="student">
+                        <img src="img/Rectangle.jpg" alt="Василий Иванов">
+                        <p class="student_name">Василий Иванов</p>
+                    </div>
+                </div>
+            </div>
+            <div class="popap">
+                <h6 class="popap_title">Войти на сайт</h6>
+                <div class="popap_input_block">
+                    <input type="text" placeholder="Логин" class="popap_input">
+                    <input type="password" placeholder="Пароль" class="popap_input">
+                </div>
+                <a href="#" class="popap_button">Войти</a>
+            </div>
+        </main>
+    </div>
+    <footer class="footer">
+        <p class="footer_text">2023 © &nbsp;<a href="#" class="footer_text_link">учебный центр</a> </p>
+    </footer>
+    <script>
+        const popapEl = document.querySelector('.popap');
+        const buttonEl = document.querySelector('.button');
+        const popapButton = document.querySelector('.popap_button');
+
+        popapEl.classList.add('visible');
+
+        buttonEl.addEventListener('click', function (e) {
+            popapEl.classList.remove('visible');
+        });
+
+        popapButton.addEventListener('click', function (e) {
+            popapEl.classList.add('visible');
+        });
+    </script>
+</body>
+
+</html>
